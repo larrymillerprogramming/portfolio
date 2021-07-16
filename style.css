@@ -1,0 +1,240 @@
+body {
+    background-color: #ffffff;
+    background-image: url(daybg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #000000;
+    text-align: center;
+    font-family: "Questrial", Helvetica, Arial, sans-serif;
+    font-size: calc(10px + 1vw);
+    word-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+::selection {
+    background-color: none;
+    color: #759889;
+}
+
+a {
+    color: #3f3d56;
+    text-decoration: none;
+    transition-duration: 0.25s;
+}
+
+a:hover {
+    color: #759889;
+}
+
+.highlight {
+    color: #759889;
+}
+
+h1 {
+    font-family: "Teko", Helvetica, Arial, sans-serif;
+    font-size: calc(10px + 5vw);
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-family: "Questrial", Helvetica, Arial, sans-serif;
+    font-size: calc(10px + 3vw);
+    color: #000000;
+    text-shadow: 0px 0px 8px #759889;
+    text-align: center;
+}
+
+/* Banner style */
+#bannerlink {
+    position: relative;
+    display: inline-block;
+    color: #3f3d56;
+    overflow: hidden;
+    background: linear-gradient(to right, #759889, #759889 50%, #3f3d56 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.75s ease;
+}
+
+#bannerlink:hover {
+    background-position: 0 100%;
+    cursor: pointer;
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contentbox {
+    margin: 0px 40px 0px 40px;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #3f3d56;
+    border-bottom: 2px solid #3f3d56;
+    border-radius: 40px 0px 40px 0px;
+    padding: 15px;
+    opacity: 1;
+}
+
+.accentbox {
+    padding: 10px;
+    background-color: rgba(117, 152, 137, 0.2);
+    border-radius: 40px;
+    border: 5px solid rgba(255, 255, 255);
+}
+
+#welcome {
+    display: block;
+}
+
+#about, #projects, #resume {
+    display: none;
+}
+
+#pdflink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: calc(10px + 2vw);
+}
+
+.spacer {
+    background-color: none;
+    min-height: 15px;
+    padding-bottom: 8px;
+}
+
+button {
+    transition: 0.25s;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+    border: solid 2px #759889;
+    padding: 0px 8px 0px 8px;
+    margin: 0px 5px 0px 5px;
+    color: #3f3d56;
+}
+
+button:hover {
+    background-image: linear-gradient(#00000000, #00000000, #d9ede1, #759889);
+    border-color: #3f3d56;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#thinkgreen {
+    display: block;
+}
+
+#thinkorange {
+    display: none;
+}
+
+#projectslink {
+    transition: 0.25s;
+}
+
+#projectslink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* navbar style */
+.navbar {
+    background: none;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+
+.navbar-nav {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+
+.nav-link {
+    padding: 4px 20px 4 20px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-link:hover {
+    text-decoration: none !important;
+    color: #3f3d56;
+}
+
+.nav-item {
+    transition: 0.25s;
+    text-align: center;
+    border-radius: 0px 0px 100px 100px;
+    background: rgba(255, 255, 255 ,0.8);
+}
+
+.nav-item:hover {
+    background-image: linear-gradient(#00000000, #00000000, #d9ede1, #759889);
+    box-shadow: inset 0px -2px 2px #759889;
+}
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffffcc;
+    border: 0px none;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+     background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    background: #759889;
+    border: 0px none;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #759889;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #759889;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

@@ -1,0 +1,239 @@
+body {
+    background-color: #000000;
+    background-image: url(citybg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    font-family: "Questrial", Helvetica, Arial, sans-serif;
+    font-size: calc(10px + 1vw);
+    word-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+::selection {
+    background-color: none;
+    color: #dd9933;
+}
+
+a {
+    color: #dd9933;
+    text-decoration: none;
+    transition-duration: 0.25s;
+}
+
+a:hover {
+    color: #3f3d56;
+}
+
+.highlight {
+    color: #dd9933;
+}
+
+h1 {
+    font-family: "Teko", Helvetica, Arial, sans-serif;
+    font-size: calc(10px + 5vw);
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-family: "Questrial", Helvetica, Arial, sans-serif;
+    font-size: calc(10px + 3vw);
+    color: #fff;
+    text-shadow: 0px 0px 8px #074e67;
+    text-align: center;
+}
+
+/* Banner style */
+#bannerlink {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    overflow: hidden;
+    background: linear-gradient(to right, #dd9933, #dd9933 50%, #ffffff 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.75s ease;
+}
+
+#bannerlink:hover {
+    background-position: 0 100%;
+    cursor: pointer;
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contentbox {
+    margin: 0px 40px 0px 40px;
+    background-color: #000000;
+    background-color: rgba(0,0,0,0.9);
+    border-right: 2px solid #3f3d56;
+    border-bottom: 2px solid #3f3d56;
+    border-left: 2px solid #dd9933;
+    border-top: 2px solid #dd9933;
+    border-radius: 40px 0px 40px 0px;
+    padding: 15px;
+    opacity: 1;
+}
+
+.accentbox {
+    padding: 10px;
+    background-color: #3f3d5655;
+    border-radius: 40px;
+    border: 5px solid rgba(0, 0, 0, 0.6);
+}
+
+#welcome {
+    display: block;
+}
+
+#about, #projects, #resume {
+    display: none;
+}
+
+#pdflink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: calc(10px + 2vw);
+}
+
+.spacer {
+    background-color: none;
+    min-height: 15px;
+    padding-bottom: 8px;
+}
+
+button {
+    transition: 0.25s;
+    background: none;
+    border-radius: 100px;
+    border: solid 2px #dd9933;
+    padding: 0px 8px 0px 8px;
+    margin: 0px 5px 0px 5px;
+    color: #ffffff;
+}
+
+button:hover {
+    background-image: radial-gradient(at bottom, #003366, #001a33, #00000000, #00000000);
+    border-color: #3f3d56;
+    color: #dd9933;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#thinkgreen {
+    display: none;
+}
+
+#thinkorange {
+    display: block;
+}
+
+#projectslink {
+    transition: 0.25s;
+}
+
+#projectslink:hover {
+    color: #3f3d56;
+    cursor: pointer;
+}
+
+/* navbar style */
+.navbar {
+    background: none;
+    padding-top: 0px !important;
+}
+
+.navbar-nav {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+
+.nav-link {
+    padding: 4px 20px 4 20px !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-link:hover {
+    color: #dd9933;
+}
+
+.nav-item {
+    transition: 0.25s;
+    text-align: center;
+    border-radius: 0px 0px 100px 100px;
+    background: rgba(0,0,0,0.8);
+}
+
+.nav-item:hover {
+    background-image: radial-gradient(at bottom, #003366, #001a33, #00000000, #00000000);
+    box-shadow: inset 0px -2px 2px #3f3d56;
+}
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dd9933;
+    border: 0px none;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+     background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    background: #001a33;
+    border: 0px none;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #001a33;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #001a33;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

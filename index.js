@@ -37,22 +37,27 @@ document.addEventListener('DOMContentLoaded', function() {
         switchContent('#data');
     });
 
-    // Call switchContent with landing page buttons
-    document.querySelector('#landabout').addEventListener('click', () => {
-        switchContent('#about');
-    });
-    document.querySelector('#landprojects').addEventListener('click', () => {
-        switchContent('#projects');
-    });
-    document.querySelector('#landresume').addEventListener('click', () => {
-        switchContent('#resume');
-    });
-    document.querySelector('#landdata').addEventListener('click', () => {
+    // // Call switchContent with landing page buttons
+    // document.querySelector('#landabout').addEventListener('click', () => {
+    //     switchContent('#about');
+    // });
+    // document.querySelector('#landprojects').addEventListener('click', () => {
+    //     switchContent('#projects');
+    // });
+    // document.querySelector('#landresume').addEventListener('click', () => {
+    //     switchContent('#resume');
+    // });
+    // document.querySelector('#landdata').addEventListener('click', () => {
+    //     switchContent('#data');
+    // });
+
+    // Data link in Welcome page
+    document.querySelector('#datalink1').addEventListener('click', () => {
         switchContent('#data');
     });
 
     // Data link in About page
-    document.querySelector('#datalink').addEventListener('click', () => {
+    document.querySelector('#datalink2').addEventListener('click', () => {
         switchContent('#data');
     });
 

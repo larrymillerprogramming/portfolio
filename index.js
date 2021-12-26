@@ -10,6 +10,7 @@ function switchContent(div) {
         document.querySelector('#about').style.display = 'none';
         document.querySelector('#projects').style.display = 'none';
         document.querySelector('#resume').style.display = 'none';
+        document.querySelector('#data').style.display = 'none';
         document.querySelector(selectedDiv).style.display = 'block';
         document.querySelector('.contentbox').style.animation = 'show 0.5s forwards';
         console.log(selectedDiv);
@@ -32,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#navresume').addEventListener('click', () => {
         switchContent('#resume');
     });
+    document.querySelector('#navdata').addEventListener('click', () => {
+        switchContent('#data');
+    });
 
     // Call switchContent with landing page buttons
     document.querySelector('#landabout').addEventListener('click', () => {
@@ -43,10 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#landresume').addEventListener('click', () => {
         switchContent('#resume');
     });
+    document.querySelector('#landdata').addEventListener('click', () => {
+        switchContent('#data');
+    });
 
-    // Project link in About page
-    document.querySelector('#projectslink').addEventListener('click', () => {
-        switchContent('#projects');
+    // Data link in About page
+    document.querySelector('#datalink').addEventListener('click', () => {
+        switchContent('#data');
     });
 
     // Show landing page when banner is clicked

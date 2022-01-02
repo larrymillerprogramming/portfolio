@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Larry Miller</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+        <!-- Custom CSS file -->
+        <link id="cssfile" rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand sticky-top">
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navabout" href="about.html">About</a></li>
+                </ul>
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navdata" href="bikecase.html">Case Study</a></li>
+                </ul>
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navresume" href="resume.html">Resume</a></li>
+                </ul>
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navprojects" href="webdev.html">Web Dev</a></li>
+                </ul>
+            </div>
+        </nav>  
+
+        <div class="spacer"></div>
+        
+        <div id="banner">
+            <h1 id="bannerlink"><a href="index.html">Larry Miller</a></h1>
+        </div>
+
+        <div class="spacer"><span id="cssswitch"><i class="bi bi-moon"></i></span></div>
+
+        <div class="contentbox">
+            <div id="bikecase">
+                <div style="position: relative;">
+                    <a id="pdflink" href="static/CyclisticCaseStudy.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-earmark-pdf"></i></a>
+                </div>
+                <h3>Cyclistic Case Study</h3>
+                <h4>Bike-Share Annual Memberships</h4>
+                <b>ABOUT THIS CASE STUDY</b>
+                <hr>
+                <p>Cyclistic is a fictional bike-share company based in Chicago. Users of the 
+                    service are divided into two main categories: members and casual riders. 
+                    Members pay an annual membership fee to access the bikes, and casual riders 
+                    rent bikes for a single trip or full-day pass. <br><br>
+                    Cyclistic’s director of marketing has the goal of maximizing the number of 
+                    annual memberships. To do this, they want to focus on current “casual rider” 
+                    customers and find strategies to encourage them to purchase an annual membership. <br><br>
+                    Using the R programming language, I was able to explore, clean, and analyze nearly 5.5 million 
+                    rows of data to provide visualizations and recommendations for Cyclistic.
+                </p>
+                <br>
+                <b>THE PRESENTATION</b>
+                <hr>
+                <div id=slidediv>
+                    <iframe id=slideiframe src="https://docs.google.com/presentation/d/e/2PACX-1vStfx_Mb1QwuRIFqr7W7allyS01k9iuWPc_yH5KJFUovZnj822JdsP-IxXxiMgEPxWwx9G45Js8jktB/embed?start=false&loop=false&delayms=10000" 
+                frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+                <br><br>
+                <b>MORE ABOUT THIS ANALYSIS</b>
+                <hr>
+                <div style="text-align: left;">
+                    I began by exploring the data using R in RStudio. Because the csv files were large, 
+                    I used the <code>fread()</code> function in the data.table package to create data frames for each month.
+                    <br><br>
+                    For example:<br><br>
+
+                    <pre>`202104.tripdata` &lt;- fread("/cloud/project/Dec2020-Nov2021csvs/202104-divvy-tripdata.csv", data.table=FALSE)</pre>
+                    <hr><br>
+
+                    Then, for each month I analyzed, I assigned it to the variable <code>tripdata</code>.
+                    <br>
+                    This script removes any duplicate rows.
+                    <br><br>
+                    <pre>tripdatadistinct &lt;- tripdata %>%<br />     distinct()</pre>
+                    <hr><br>
+
+                    Then, I created a visualization of trips per day for each month. The color 
+                    highlighting the comparison between members and casual riders.
+                    <br><br>
+                    For example:<br><br>
+                    <pre>ggplot(data=`tripdata`) +<br />     geom_bar(mapping=aes(substr(started_at, 9, 10), fill=member_casual)) +<br />     labs(title="April 2021 Trips by Day", x="day") +<br />     scale_fill_discrete(name = "users")</pre>
+                </div>
+                    <img src="static/cyclisticApr2021viz.png" width="90%" alt="Visualization of April 2021 member trips and casual trips">
+                    <hr><br>
+                <div style="text-align: left;">
+                    For each month, I used the <code>count()</code> function to summarize the total trips for casual riders and the total trips for members.
+                    <br><br>
+                    <pre>tripdata %>%<br />count(member_casual)</pre>
+                    <hr><br>
+
+                    I then used Google Sheets to aggregate the totals into one small spreadsheet.
+                    <br><br>
+                    I also wanted to investigate the average trip length, but I noticed that a few instances 
+                    had inaccurate data (ended_at time was before started_at time).<br>
+                    I used this script to filter out those rows for my calculations.
+                    <br><br>
+                    <pre>tripdatafiltered &lt;- filter(tripdata, ended_at > started_at)</pre>
+                    <hr><br>
+
+                    Then, I used the filtered data to calculate the average casual trip length and the average member trip length.
+                    <br><br>
+                    <pre>tripdatafiltered %>%<br />     group_by(member_casual) %>%<br />     summarize(mean(difftime(ended_at, started_at, units = "mins")))</pre>
+                    
+                </div>
+            </div>
+        </div> 
+
+        <div class="spacer"></div>
+    </body>
+
+    <script src="index.js"></script>
+</html>

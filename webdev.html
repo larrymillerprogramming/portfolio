@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Larry Miller</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+        <!-- Custom CSS file -->
+        <link id="cssfile" rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand sticky-top">
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navabout" href="about.html">About</a></li>
+                </ul>
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navdata" href="bikecase.html">Case Study</a></li>
+                </ul>
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navresume" href="resume.html">Resume</a></li>
+                </ul>
+                <ul class="navbar-nav m-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" id="navprojects" href="webdev.html">Web Dev</a></li>
+                </ul>
+            </div>
+        </nav>  
+
+        <div class="spacer"></div>
+        
+        <div id="banner">
+            <h1 id="bannerlink"><a href="index.html">Larry Miller</a></h1>
+        </div>
+
+        <div class="spacer"><span id="cssswitch"><i class="bi bi-moon"></i></span></div>
+
+        <div class="contentbox">
+            <div class="container" id="projects">
+                <h3>Web Development</h3>
+                <h4>Recent Projects</h4>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 accentbox">
+                        <p>
+                            <b>Moral Of The Story</b>
+                            <br>
+                            <img class="thumbnail" src="static/MOTSthumb.png" width="100%">
+                            <br><br>
+                            <b>Featured:</b>
+                            <br>
+                            <i>Python(Django), JSON, JavaScript, SQLite, Heroku, HTML5, CSS3, Bootstrap4</i>
+                            <br><br>
+                            Social networking web app for sharing life's little wisdoms. Utilizes Javascript’s Fetch API to handle data seamlessly.
+                        </p>
+                        <form target="_blank" action="https://moralofthestory.herokuapp.com/">
+                            <button type="submit">View Live</button>
+                        </form>
+                        <form target="_blank" action="https://github.com/larrymillerprogramming/moralofthestory">
+                            <button type="submit">Source Code</button>
+                        </form>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 accentbox">
+                        <p>
+                            <b>Bibli-O</b>
+                            <br>
+                            <img class="thumbnail" src="static/bibliothumb.png" width="100%">
+                            <br><br>
+                            <b>Featured:</b>
+                            <br>
+                            <i>Python(Flask), Goodreads API, PostgreSQL, HTML5, CSS3, Bootstrap4</i>
+                            <br><br>
+                            A community-based web app for sharing book reviews, utilizing the Goodreads API and Heroku's PostgreSQL.
+                        </p>
+                        <form target="_blank" type="POST" action="https://tinyurl.com/45eatbj8">
+                            <button type="submit">Video Demo</button>
+                        </form>
+                        <form target="_blank" action="https://github.com/larrymillerprogramming/bibli-o">
+                            <button type="submit">Source Code</button>
+                        </form>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 accentbox">
+                        <p>
+                            <b>Make-A-Habit</b>
+                            <br>
+                            <img class="thumbnail" src="static/habitthumb.png" width="100%">
+                            <br><br>
+                            <b>Featured:</b>
+                            <br>
+                            <i>HTML5, CSS3, React.js, JSX</i>
+                            <br><br>
+                            A web application (React front-end) designed to create and track positive habits.
+                        </p>
+                        <form target="_blank" action="https://larrymillerprogramming.github.io/make-a-habit/#/">
+                            <button type="submit">View Live</button>
+                        </form>
+                        <form target="_blank" action="https://github.com/larrymillerprogramming/make-a-habit">
+                            <button type="submit">Source Code</button>
+                        </form>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 accentbox">
+                        <p>
+                            <b>Kathleen Dunn Portfolio</b>
+                            <br>
+                            <img class="thumbnail" src="static/kitprofile.png" width="100%">
+                            <br><br>
+                            <b>Featured:</b>
+                            <br>
+                            <i>HTML5, CSS3, Bootstrap4</i>
+                            <br><br>
+                            Utilizes many Bootstrap features to create an engaging portfolio for singer and choral director, Kathleen Dunn.
+                        </p>
+                        <form target="_blank" action="https://larrymillerprogramming.github.io/KathleenDunnPortfolio/index.html">
+                            <button type="submit">View Live</button>
+                        </form>
+                        <form target="_blank" action="https://github.com/larrymillerprogramming/KathleenDunnPortfolio">
+                            <button type="submit">Source Code</button>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+        <div class="spacer"></div>
+    </body>
+
+    <script src="index.js"></script>
+</html>
